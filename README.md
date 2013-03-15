@@ -1,11 +1,11 @@
 
 # Tuner WebGL
 
-version: 1.0
+Version: 1.0
 
 ## Authors
 
-Harrison Mendonça www.github.com/euharrison
+Harrison Mendonça www.github.com/euharrison  
 Pedro Rezende www.github.com/pedrorezende
 
 ## How to
