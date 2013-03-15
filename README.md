@@ -10,6 +10,8 @@ Pedro Rezende www.github.com/pedrorezende
 
 ## How to
 
+Please, take a note that it use the experiment *Web Audio API* from Google Chrome and will not works on all browsers/machines
+
 On Google Chrome, type [chrome://flags](chrome://flags) and enable the **Web Audio Input**
 
 Then go www.harrison.com.br/tuner and allow access to the microphone.
