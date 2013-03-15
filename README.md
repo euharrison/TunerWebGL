@@ -10,7 +10,8 @@ Pedro Rezende www.github.com/pedrorezende
 
 ## How to
 
-On Google Chrome, type [chrome://flags](chrome://flags) and enable the **Web Audio Input**
+On Google Chrome, type [chrome://flags][1] and enable the **Web Audio Input**
+[1]: <chrome://flags>
 
 Then go www.harrison.com.br/tuner and allow access to the microphone.
 
