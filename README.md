@@ -20,6 +20,8 @@ Start play or sing.
 
 ## Description
 
+![TunerWebGL](http://distilleryimage10.instagram.com/2fd3a71a963e11e285e022000a9e51fb_7.jpg)
+
 This is an experiment that happened on SuperLab, Rio de Janeiro.  
 The main objective is to begin to learn the power of WebGL.
 
