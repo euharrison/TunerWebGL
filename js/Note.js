@@ -4,7 +4,7 @@
  * @author Pedror Rezende / github.com/pedrorezende
  */
 
-var Note = function(letter)
+var Note = function(letter, posX, posY)
 {
 	// properties
 
@@ -17,9 +17,9 @@ var Note = function(letter)
 
 	this.geometry = new THREE.TextGeometry( letter, {
 
-		size: 100,
-		height: 20,
-		curveSegments: 30,
+		size: 30,
+		height: 8,
+		curveSegments: 5,
 	
 		font: "helvetiker",
 		weight: "bold",
@@ -34,22 +34,19 @@ var Note = function(letter)
 
 	});
 
-	this.geometry.computeBoundingBox();
-	this.geometry.computeVertexNormals();
-
 	// center
 
-	var diffX = 0;
-	var diffY = 0;
+	var halfWidth = 0;
+	var halfHeight = 0;
 	for (var i = 0; i < this.geometry.vertices.length; i++) {
-		diffX = Math.max( this.geometry.vertices[i].x, diffX);
-		diffY = Math.max( this.geometry.vertices[i].y, diffY);
+		halfWidth = Math.max( this.geometry.vertices[i].x, halfWidth);
+		halfHeight = Math.max( this.geometry.vertices[i].y, halfHeight);
 	}
-	diffX /= 2;
-	diffY /= 2;
+	halfWidth /= 2;
+	halfHeight /= 2;
 	for (var i = 0; i < this.geometry.vertices.length; i++) {
-		this.geometry.vertices[i].x -= diffX;
-		this.geometry.vertices[i].y -= diffY;
+		this.geometry.vertices[i].x += posX - halfWidth;
+		this.geometry.vertices[i].y += posY - halfHeight;
 	}
 
 	// vertices
@@ -60,8 +57,8 @@ var Note = function(letter)
 
 	// material
 
-	this.material = new THREE.MeshPhongMaterial( { color: 0xffffff, specular: 0xffffff, shininess: 10 } );
-	
+	this.material = new THREE.MeshPhongMaterial( );
+
 	// mesh
 
 	this.mesh = new THREE.Mesh( this.geometry, this.material );
