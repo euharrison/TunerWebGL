@@ -20,6 +20,19 @@ var notes;
 
 function init() 
 {
+	// How to
+	$("#howto").click(function() {
+		$("#howto_explanation").toggle();
+	});
+
+	// Fullscreen
+
+	$("#fullscreen").click(function() {
+	    var el = document.documentElement;
+	    var rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen;
+	    rfs.call(el);
+	});
+
 	// Sound
 
 	tuner = new Tuner();
@@ -30,8 +43,6 @@ function init()
 	camera.position.x = 150;
 	camera.position.y = -60;
 	camera.position.z = 300;
-	//camera.lookAt( scene.position );
-
 
 	// Scene
 
