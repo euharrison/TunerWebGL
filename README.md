@@ -1,7 +1,7 @@
 
 # Tuner WebGL
 
-Version: 1.0
+Version: 2.0
 
 ## Authors
 
@@ -10,17 +10,19 @@ Pedro Rezende www.github.com/pedrorezende
 
 ## How to
 
-Please, take a note that it use the experiment *Web Audio API* from Google Chrome and will not works on all browsers/machines
+Please, take a note that it use the experiment Web Audio API from Google Chrome and will not works on all browsers/machines.
 
-On Google Chrome, type [chrome://flags](chrome://flags) and enable the **Web Audio Input**
+1. On Google Chrome, type [chrome://flags](chrome://flags).
 
-Then go www.harrison.com.br/tuner and allow access to the microphone.
+2. Enable the **Web Audio Input**, you will have to restart your browser.
 
-Start play or sing.
+3. Allow access to the microphone.
+
+4. Start play or sing.
 
 ## Description
 
-This is an experiment that happened on SuperLab, Rio de Janeiro.  
+This is an experiment that happened on SuperLab(http://superlab.superuber.com/), Rio de Janeiro.  
 The main objective is to begin to learn the power of WebGL.
 
 Here you can fine tune your musical instrument.  
@@ -30,4 +32,6 @@ Remember that it is an experiment and just for fun, do not use it as a professio
 
 Enjoy.
 
-![TunerWebGL](http://distilleryimage10.instagram.com/2fd3a71a963e11e285e022000a9e51fb_7.jpg)
+[Youtube example](http://www.youtube.com/watch?v=gUtad2yAOvk)
+
+![TunerWebGL](http://oi38.tinypic.com/2ntlo2s.jpg)
