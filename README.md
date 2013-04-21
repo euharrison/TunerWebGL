@@ -7,6 +7,8 @@ Version: 2.0
 
 Harrison Mendonça www.github.com/euharrison  
 Pedro Rezende www.github.com/pedrorezende
+Nicole Schlegel
+Davi Fontenele
 
 ## How to
 
