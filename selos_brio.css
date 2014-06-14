@@ -1,0 +1,120 @@
+/* --- Selos BRIO --- */
+
+/* Base */
+
+#brio {
+	position:absolute;
+	z-index:9999;
+}
+
+#brio.left, #brio.right {
+	top:50%;
+	margin-top: -77px;
+}
+
+#brio.upper_left, #brio.upper_right {
+	top:0;
+}
+
+#brio.left {
+	left:0;
+}
+
+#brio.right {
+	right:0;
+}
+
+#brio.upper_left{
+	left:0;
+	margin-left: 77px;
+}
+
+#brio.upper_right{
+	right:0;
+	margin-right: 77px;
+}
+
+
+/* Link */
+
+#brio a {
+	display:block;
+	text-indent:-8000px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	overflow:hidden;
+}
+
+#brio.left a, #brio.right a {
+	width:116px;
+	height:50px;
+}
+
+#brio.upper_left a, #brio.upper_right a {
+	width:56px;
+	height:100px;
+}
+
+/* Images */
+
+#brio.left a {
+	background-image:url('img/selo_exp_men_dev_h_e.png');
+}
+#brio.right a {
+	background-image:url('img/selo_exp_men_dev_h_d.png');
+}
+#brio.upper_left a, #brio.upper_right a{
+	background-image:url('img/selo_exp_men_dev_v.png');
+}
+
+
+/* MEDIA QUERIES */
+
+/* Landscape phone to portrait tablet */
+
+@media (max-width: 767px) {
+
+	/* hidden */
+	#brio {
+		display: none;
+	}
+
+}
+
+/* Retina Displays */
+
+/* Target any device with retina display (ie iPad 3 and MacBook Pro) */
+
+@media 
+only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+	#brio.left a, #brio.right a {
+		-moz-background-size: 116px 50px;
+		-ie-background-size: 116px 50px;
+		-o-background-size: 116px 50px;
+		-webkit-background-size: 116px 50px;
+		background-size: 116px 50px;
+	}
+
+	#brio.upper_left a, #brio.upper_right a {
+		-moz-background-size: 56px 100px;
+		-ie-background-size: 56px 100px;
+		-o-background-size: 56px 100px;
+		-webkit-background-size: 56x 100x;
+		background-size: 56px 100px;
+	}
+
+	#brio.left a {
+		background-image:url('img/selo_exp_men_dev_h_e_2x.png');
+	}
+	#brio.right a {
+		background-image:url('img/selo_exp_men_dev_h_d_2x.png');
+	}
+	#brio.upper_left a, #brio.upper_right a {
+		background-image:url('img/selo_exp_men_dev_v_2x.png');
+	}
+	
+}

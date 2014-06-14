@@ -3,10 +3,18 @@
  * @author Pedror Rezende / github.com/pedrorezende
  * @author Chris Wilson / http://webaudiodemos.appspot.com/ 
  */
-
+	
 var Tuner = function() 
 {
-	var audioContext = new webkitAudioContext();
+	var audioContext;
+	try {
+		window.AudioContext = window.AudioContext || window.webkitAudioContext;
+		audioContext = new AudioContext();
+	}
+	catch(e) {
+		alert('Web Audio API is not supported in this browser');
+	}
+
 	var isPlaying = false;
 	var sourceNode = null;
 	var analyser = null;
@@ -31,15 +39,23 @@ var Tuner = function()
 	}
 
 	function error() {
-	    alert('Stream generation failed.');
+	    alert('getUserMedia() is not supported in your browser.');
+	}
+
+	function hasGetUserMedia() {
+	  // Note: Opera is unprefixed.
+	  return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
+	            navigator.mozGetUserMedia || navigator.msGetUserMedia);
 	}
 
 	function getUserMedia(dictionary, callback) {
-	    try {
-	        navigator.webkitGetUserMedia(dictionary, callback, error);
-	    } catch (e) {
-	        alert('webkitGetUserMedia threw exception :' + e);
-	    }
+		try {
+			navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+			navigator.getUserMedia(dictionary, callback, error);
+		}
+		catch(e) {
+			alert('getUserMedia() is not supported in your browser');
+		}
 	}
 
 	function gotStream(stream) {
